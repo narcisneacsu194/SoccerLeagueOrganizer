@@ -13,6 +13,8 @@ public class Team implements Comparable<Team>, Serializable{
     public Team(String teamName){
         mTeamName = teamName;
         mPlayers = new ArrayList<>();
+        mNoExperiencedPlayers = 0;
+        mNoInexperiencedPlayers = 0;
     }
 
     public String getTeamName(){
@@ -27,18 +29,13 @@ public class Team implements Comparable<Team>, Serializable{
         mPlayers.add(player);
     }
 
-    public void removePlayer(int playerIndex){
+    public void removePlayer(int playerIndex) {
         Player player = mPlayers.get(playerIndex);
-        System.out.println("\nPlayer " +
-        player.getFirstName() +
-        " " + player.getLastName() +
-        " has been removed from team " +
-        getTeamName() + ".");
+        System.out.printf("%nPlayer %s %s has been removed from team %s.%n",
+                player.getFirstName(),
+                player.getLastName(),
+                mTeamName);
         mPlayers.remove(playerIndex);
-    }
-
-    public int getNumberOfPlayers(){
-        return mPlayers.size();
     }
 
     public boolean isTeamEmpty(){

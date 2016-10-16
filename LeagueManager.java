@@ -9,16 +9,26 @@ public class LeagueManager {
         try{
             organizer.run();
         }catch(IOException ioe){
-            System.out.printf("%nYour input is invalid.%nYou must enter one of the numerical values displayed on the screen.");
+            System.out.printf("%nSomething went wrong with the input stream.%n");
             ioe.printStackTrace();
+            return;
+        }catch(IllegalArgumentException iae){
+            System.err.printf("%nYou must only enter numerical values.%n");
+            System.out.printf("%nExiting Organizer mode...%n");
+            System.out.printf("%nExiting Soccer League Organizer app...%n");
+            return;
         }
 
         Coach coach = new Coach(organizer);
         try{
             coach.run();
         }catch(IOException ioe){
-            System.out.printf("%nYour input is invalid.%nYou must enter one of the numerical values displayed on the screen.");
+            System.out.printf("%nSomething went wrong with the input stream.%n");
             ioe.printStackTrace();
+        }catch(IllegalArgumentException iae){
+            System.err.printf("%nYou must only enter numerical values.%n");
+            System.out.printf("%nExiting Coach mode...%n");
+            System.out.printf("%nExiting Soccer League Organizer app...%n");
         }
     }
 }

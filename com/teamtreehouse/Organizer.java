@@ -33,7 +33,7 @@ public class Organizer {
     }
 
     //This method starts the application.
-    public void run() throws IOException{
+    public void run() throws IOException, IllegalArgumentException{
         while(true){
             printMenu();
             System.out.printf("%nChoice:  ");
@@ -96,7 +96,7 @@ public class Organizer {
 
     //This method lists players for you to choose.
     //After you choose a player, you are prompted with a list of teams in which you want to add the selected player.
-    private void addPlayer() throws IOException{
+    private void addPlayer() throws IOException, IllegalArgumentException{
         if(mTeamList.isEmpty()){
             System.out.printf("%nSorry, there are no teams available.%n");
             return;
@@ -151,7 +151,7 @@ public class Organizer {
 
     //This method lists avaiable teams.
     //After you choose a team, you must also choose a player you wish to remove from the team.
-    private void removePlayer() throws IOException{
+    private void removePlayer() throws IOException, IllegalArgumentException{
         if(mTeamList.isEmpty()){
             System.out.printf("%nSorry, there are no teams available.%n");
             return;
@@ -228,7 +228,7 @@ public class Organizer {
 
     //This method lets you choose from the available teams.
     //After that, it lists all the players available in descending order by height in inches.
-    private void heightReport() throws IOException{
+    private void heightReport() throws IOException, IllegalArgumentException{
         if(mTeamList.isEmpty()){
             System.out.printf("%nSorry, there are no teams available.%n");
             return;

@@ -24,7 +24,7 @@ public class Coach {
         mCounter = 1;
     }
 
-    public void run() throws IOException{
+    public void run() throws IOException, IllegalArgumentException{
         while(true){
             printMenu();
             System.out.printf("%nChoice:  ");
@@ -61,7 +61,7 @@ public class Coach {
         System.out.printf("3. Quit%n");
     }
 
-    private void chooseTeam() throws IOException{
+    private void chooseTeam() throws IOException, IllegalArgumentException{
         List<Team> teamList = mOrganizer.getTeams();
 
         if(teamList.isEmpty()){
