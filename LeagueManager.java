@@ -13,7 +13,7 @@ public class LeagueManager {
             ioe.printStackTrace();
             return;
         }catch(IllegalArgumentException iae){
-            System.err.printf("%nYou must only enter numerical values.%n");
+            System.err.printf("%nYou must only enter numerical values between 1 and 6, respectively.%n");
             System.out.printf("%nExiting Organizer mode...%n");
             System.out.printf("%nExiting Soccer League Organizer app...%n");
             return;
@@ -26,7 +26,7 @@ public class LeagueManager {
             System.out.printf("%nSomething went wrong with the input stream.%n");
             ioe.printStackTrace();
         }catch(IllegalArgumentException iae){
-            System.err.printf("%nYou must only enter numerical values.%n");
+            System.err.printf("%nYou must only enter numerical values between 1 and 3, respectively.%n");
             System.out.printf("%nExiting Coach mode...%n");
             System.out.printf("%nExiting Soccer League Organizer app...%n");
         }
