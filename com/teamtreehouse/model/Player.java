@@ -37,18 +37,15 @@ public class Player implements Comparable<Player>, Serializable{
     //If two last names are equal, the comparison of the first names comes next.
     @Override
     public int compareTo(Player other){
-        if(lastName.compareTo(other.getLastName()) > 0){
-            return 1;
-        }else if(lastName.compareTo(other.lastName) < 0){
-            return -1;
-        }else{
-            if(firstName.compareTo(other.firstName) > 0){
-                return 1;
-            }else if(firstName.compareTo(other.firstName) < 0){
-                return -1;
-            }
 
+        if(this.equals(other)){
             return 0;
+        }
+
+        if(!lastName.equals(other.lastName)){
+            return lastName.compareTo(other.lastName);
+        }else{
+            return firstName.compareTo(other.firstName);
         }
     }
 
