@@ -38,10 +38,12 @@ public class Prompter {
                         break;
                     }else{
                         if(top != 1){
-                            System.out.printf("%nThe option you provided is invalid. You must enter a number between 1 and %d, respectively%n%nChoice:  ",
+                            System.out.printf("%nThe option you provided is invalid. ");
+                            System.out.printf("You must enter a number between 1 and %d, respectively.%n%nChoice:  ",
                                     top);
                         }else{
-                            System.out.printf("%nThe option you provided is invalid. Your only option in this case is to choose number 1.%n%nChoice:  ");
+                            System.out.printf("%nThe option you provided is invalid. ");
+                            System.out.printf("Your only option in this case is to choose number 1.%n%nChoice:  ");
                         }
                     }
             }catch(IOException ioe){
