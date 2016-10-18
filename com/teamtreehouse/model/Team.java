@@ -137,16 +137,10 @@ public class Team implements Comparable<Team>, Serializable{
                 numberOfExperiencedPlayers++;
             }
         }
-        System.out.printf("%n%d  %d%n",
-                total,
-                numberOfExperiencedPlayers);
 
         float percentage = (float)numberOfExperiencedPlayers / total;
         mPercentageOfExperiencedPlayers = (int)(percentage * 100);
 
-        System.out.printf("%n%f  %d%n",
-                percentage,
-                mPercentageOfExperiencedPlayers);
     }
 
 }
