@@ -1,7 +1,9 @@
 # SoccerLeagueOrganizer
+
 This app enables you to create tames, assign players to them fairly and then print out a roster for each team.
 
 Features:
+
 -You are presented with a menu item that allows you to create a new team;
 
 -You are presented with a menu item that allows you to add players to a team;
